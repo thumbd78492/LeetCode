@@ -11,6 +11,5 @@ struct TreeNode* buildSubtree(int* nums, int l, int r) {
 }
 
 struct TreeNode* sortedArrayToBST(int* nums, int numsSize){
-    struct TreeNode* root = buildSubtree(nums, 0, numsSize-1);
-    return root;
+    return buildSubtree(nums, 0, numsSize-1);
 }
