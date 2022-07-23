@@ -11,11 +11,6 @@ struct TreeNode* buildSubtree(int* nums, int l, int r) {
 }
 
 struct TreeNode* sortedArrayToBST(int* nums, int numsSize){
-    struct TreeNode* root = malloc(sizeof(struct TreeNode));
-    int mid = numsSize/2;
-    root->val = nums[mid];
-    root->left = buildSubtree(nums, 0, mid-1);
-    root->right = buildSubtree(nums, mid+1, numsSize-1);
-    
+    struct TreeNode* root = buildSubtree(nums, 0, numsSize-1);
     return root;
 }
